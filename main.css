@@ -1,0 +1,105 @@
+/* COMMON */
+body {
+    background-color: navy;
+}
+input {
+    outline: none;
+}
+
+/* HEADER */
+.header .container {
+    width: 1480px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+}
+
+/* HEADER - 왼쪽 부분 */
+.header .container .container-left {
+    display: flex;
+}
+.header .container .container-left .logo {
+    margin-right: 12px;
+}
+.header .container .container-left .logo img {
+    display: block;
+}
+.header .container .container-left .menu {
+    display: flex;
+    align-items: center;
+}
+.header .container .container-left .menu p {
+    margin-right: 15px;
+}
+
+
+
+/* 구현이 안됨... */
+.header .container .container-left .menu p .material-icons {
+    color: gray;
+}
+
+
+/* 구현이 안됨... */
+.header .container .container-left .menu p:hover .material-icons {
+    color: #fff;
+}
+
+
+.header .container .container-left .menu .menu-item {
+    color: #fff;
+    font-size: 20px;
+}
+.header .container .container-left .menu .mar {
+    margin-right: 15px;
+    transition: color .4s;
+}
+
+.header .container .container-left .menu .menu-item:hover {
+    color: gray;
+}
+
+
+
+/* HEADER - 오른쪽 부분 */
+
+.header .container .container-right {
+    display: flex;
+    justify-content: flex-end;
+}
+.header .container .container-right input {
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.header .container .container-right input:focus {
+    background-color: #fff;
+}
+.header .container .container-right p {
+    display: flex;
+    align-items: center;
+}
+.header .container .container-right p #signin {
+    background-color: transparent;
+    padding: 3px 4px;
+    color: #fff;
+    transition: color .4s;
+}
+.header .container .container-right p #signin:hover {
+    color: gray;
+}
+
+.header .container .container-right p #signup {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 3px 4px;
+    color: #fff;
+    transition: .4s;
+}
+.header .container .container-right p #signup:hover {
+    color: gray;
+    border-color: gray;
+}
