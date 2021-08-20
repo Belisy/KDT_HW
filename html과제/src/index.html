@@ -5,33 +5,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <!-- 01. 기본경로 설정하기(이곳에 작성) -->
-        <link rel="stylesheet" href="./css/index.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+        <base href="./assets/">
+        <link rel="stylesheet" href="css/index.css" />
         <link
             href="https://fonts.googleapis.com/css?family=Montserrat|Nanum+Gothic&display=swap"
             rel="stylesheet"
         />
         <!-- 02. 브라우저 타이틀 표시하기(이곳에 작성) -->
-        <script src="./js/main.js"></script>
+        <title>MY BLOG</title>
+        <script src="js/main.js"></script>
     </head>
     <body>
         <!-- 헤더 -->
-        <div class="header">
+        <header class="header">
             <div class="container">
-                <h2 class="logo-title">MY BLOG</h2>
+                <h1 class="logo-title">MY BLOG</h1>
                 <nav>
                     <ul class="menu">
                         <li class="menu-item">
-                            <a href="../index.html?card"> 게시글#1</a>
+                            <a href="../#card1"> 게시글#1</a>
                         </li>
                         <li class="menu-item">
-                            <a href="../index.html?card"> 게시글#2</a>
+                            <a href="../#card2"> 게시글#2</a>
                         </li>
                     </ul>
                 </nav>
             </div>
-        </div>
+        </header>
         <!-- 본문 -->
-        <div class="content">
+        <main class="content">
             <!-- 글쓰기 영역 -->
             <section class="write">
                 <header><h2 class="title">글쓰기</h2></header>
@@ -40,17 +43,18 @@
                         <p>
                             <label>
                                 제목<br />
-                                <input type="text" name="subject" />
+                                <input type="text" name="subject" placeholder="제목을 입력해 주세요."/>
                             </label>
                         </p>
                         <p>
                             <label>
                                 내용<br />
-                                <input
+                                <textarea
                                     name="content"
                                     cols="55"
                                     rows="5"
-                                ></input>
+                                    placeholder="내용을 입력해 주세요."
+                                ></textarea>
                             </label>
                         </p>
                         <p>
@@ -67,7 +71,7 @@
                         <fieldset>
                             <legend>기분(단일선택)</legend>
                             <input
-                                type="checkbox"
+                                type="radio"
                                 name="feeling"
                                 value="Happy"
                                 id="feeling:Happy"
@@ -75,14 +79,14 @@
                             />
                             <label for="feeling:Happy">행복함</label><br />
                             <input
-                                type="checkbox"
+                                type="radio"
                                 name="feeling"
                                 value="Bad"
                                 id="feeling:Bad"
                             />
                             <label for="feeling:Bad">나쁨</label><br />
                             <input
-                                type="checkbox"
+                                type="radio"
                                 name="feeling"
                                 value="Sad"
                                 id="feeling:Sad"
@@ -125,8 +129,8 @@
                             <label for="category:ETC">기타 </label><br />
                         </fieldset>
                         <footer class="buttons">
-                            <button type="button">글쓰기</button>
-                            <button type="button">초기화</button>
+                            <button type="submit">글쓰기</button>
+                            <button type="reset">초기화</button>
                         </footer>
                     </form>
                 </div>
@@ -135,7 +139,7 @@
             <section class="timeline">
                 <h2>타임라인</h2>
                 <!-- 게시글 1번 -->
-                <div class="item">
+                <article class="item">
                     <header>
                         <h3>
                             <a id="card1">이미지 태그 연습!</a>
@@ -153,17 +157,16 @@
                                 ./images/image-md.jpg  700w,
                                 ./images/image-lg.jpg 1000w
                             "
-                            sizes="(max-width: 500px) 444px,
-                                   (max-width: 800px) 777px,
-                                   1222px"
-                            width="400"
+                            sizes="1222px"
+                            width = "400px"
+                            alt="연어덮밥(사케동)"
                         />
                         <figcaption>연어덮밥(사케동)</figcaption>
                     </figure>
                     <p>토실토실 연어가 올라가 있는 사케동!</p>
-                </div>
+                </article>
                 <!-- 게시글 2번 -->
-                <div class="item">
+                <article class="item">
                     <header>
                         <h3>
                             <a id="card2">리스트 태그 연습!</a>
@@ -174,7 +177,7 @@
                         </p>
                     </header>
                     <hr class="separator" />
-                    <ol type="A">
+                    <ol type="1">
                         <li>
                             동해물과 백두산이 마르고 닳도록 하느님이 보우하사
                             우리나라 만세 무궁화 삼천리 화려 강산 대한 사람
@@ -196,30 +199,29 @@
                             대한으로 길이 보전하세<br /><br />
                         </li>
                     </ol>
-                </div>
+                </article>
             </section>
             <!-- 우측 링크 영역 -->
-            <div class="links">
-                <nav>
+            <aside class="links">
                     <ul>
                         <li>
                             <a href="https://www.fastcampus.co.kr"
-                             target="">
+                             target="_blank">
                                 패스트캠퍼스(새창)
                             </a>
                         </li>
                         <li>
                             <a href="https://www.fastcampus.co.kr"
-                             target="">
+                             target="_self">
                                 바이트 디그리(현재창)
                             </a>
                         </li>
                     </ul>
-                </nav>
-            </div>
-        </div>
+
+            </aside>
+        </main>
         <!-- 푸터 -->
-        <div class="footer">
+        <footer class="footer">
             <div class="container">
                 <p class="copyright">MY BLOG &copy; 2020</p>
                 <address class="contact">
@@ -227,17 +229,17 @@
                         <li>사무실 : 서울시 강남구 강남대로 364</li>
                         <li>
                             이메일 :
-                            <a href="link:myblog@email.com"
+                            <a href="mailto:myblog@email.com"
                                 >myblog@example.com</a
                             >
                         </li>
                         <li>
                             전화번호 :
-                            <a href="link:12345678910">123-4567-8910</a>
+                            <a href="tel:12345678910">123-4567-8910</a>
                         </li>
                     </ul>
                 </address>
             </div>
-        </div>
+        </footer>
     </body>
 </html>
