@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <!-- 01. 기본경로 설정하기(이곳에 작성) -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
         <base href="./assets/">
         <link rel="stylesheet" href="css/index.css" />
         <link
@@ -23,10 +24,10 @@
                 <nav>
                     <ul class="menu">
                         <li class="menu-item">
-                            <a href="#card1"> 게시글#1</a> <!--문법에 맞게 했는데도 링크연결이 이상하게 연결됩니다.-->
+                            <a href="../#card1"> 게시글#1</a>
                         </li>
                         <li class="menu-item">
-                            <a href="#card2"> 게시글#2</a>
+                            <a href="../#card2"> 게시글#2</a>
                         </li>
                     </ul>
                 </nav>
@@ -42,7 +43,7 @@
                         <p>
                             <label>
                                 제목<br />
-                                <input type="text" name="subject" />
+                                <input type="text" name="subject" placeholder="제목을 입력해 주세요."/>
                             </label>
                         </p>
                         <p>
@@ -52,6 +53,7 @@
                                     name="content"
                                     cols="55"
                                     rows="5"
+                                    placeholder="내용을 입력해 주세요."
                                 ></textarea>
                             </label>
                         </p>
@@ -156,8 +158,8 @@
                                 ./images/image-lg.jpg 1000w
                             "
                             sizes="1222px"
-                            alt="연어덮밥(사케동)
-                            "
+                            width = "400px"
+                            alt="연어덮밥(사케동)"
                         />
                         <figcaption>연어덮밥(사케동)</figcaption>
                     </figure>
@@ -201,7 +203,6 @@
             </section>
             <!-- 우측 링크 영역 -->
             <aside class="links">
-                <nav>
                     <ul>
                         <li>
                             <a href="https://www.fastcampus.co.kr"
@@ -216,7 +217,7 @@
                             </a>
                         </li>
                     </ul>
-                </nav>
+
             </aside>
         </main>
         <!-- 푸터 -->
